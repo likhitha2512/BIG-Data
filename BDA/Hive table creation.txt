@@ -1,0 +1,16 @@
+CREATE EXTERNAL TABLE IF NOT EXISTS kindle_reviews_transformed(
+    product_id STRING,
+    reviewer_id STRING,
+    reviewer_name STRING,
+    review_text STRING,
+    overall_rating DOUBLE,
+    review_summary STRING,
+    review_timestamp BIGINT,
+    helpful_votes STRING,   
+    total_votes BIGINT,     
+    sentiment_label STRING
+)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE
+LOCATION 'gs://shinchan12/processed_data/';

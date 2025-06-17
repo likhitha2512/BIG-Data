@@ -1,0 +1,6 @@
+hive> SELECT product_id, COUNT(*) AS num_reviews
+    > FROM kindle_reviews_transformed
+    > WHERE product_id IS NOT NULL AND product_id != ''
+    > GROUP BY product_id
+    > ORDER BY num_reviews DESC
+    > LIMIT 10;

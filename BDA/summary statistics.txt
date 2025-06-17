@@ -1,0 +1,9 @@
+hive> SELECT
+    > ROUND(AVG(overall_rating), 2) AS avg_rating,
+    > MIN(overall_rating) AS min_rating,
+    > MAX(overall_rating) AS max_rating,
+    > COUNT(*) AS valid_review_count
+    > FROM kindle_reviews_transformed
+    > WHERE overall_rating IS NOT NULL
+    > AND overall_rating >= 1
+    > AND overall_rating <= 5;
