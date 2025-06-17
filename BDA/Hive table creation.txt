@@ -1,4 +1,4 @@
-CREATE EXTERNAL TABLE IF NOT EXISTS kindle_reviews (
+CREATE EXTERNAL TABLE IF NOT EXISTS kindle_reviews_transformed (
     product_id STRING,
     reviewer_id STRING,
     reviewer_name STRING,
