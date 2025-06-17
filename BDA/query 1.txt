@@ -1,0 +1,7 @@
+hive> SELECT review_text, overall_rating, sentiment_label
+    > FROM kindle_reviews_transformed
+    > WHERE sentiment_label = 'Positive'
+    > AND review_text IS NOT NULL AND review_text != ''
+    > AND overall_rating IS NOT NULL
+    > ORDER BY overall_rating DESC
+    > LIMIT 10;

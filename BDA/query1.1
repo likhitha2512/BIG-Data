@@ -1,0 +1,5 @@
+INSERT OVERWRITE DIRECTORY'gs://hiveclass1/outputtask1.1/booksdata/'
+SELECT publisher, AVG(ratingscount) AS avg_ratings_count
+FROM amazon_books
+GROUP BY publisher
+ORDER BY avg_ratings_count DESC;
